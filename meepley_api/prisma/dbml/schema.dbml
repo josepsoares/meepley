@@ -1,0 +1,515 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table boardgame_categories {
+  id Int [pk, increment]
+  name String [not null]
+  bgg_id Int
+  bgg_link String [not null]
+  created_at DateTime [default: `now()`, not null]
+  boardgames boardgames_has_boardgames_categories [not null]
+  users_favorite_boardgame_categories users_has_favorite_boardgame_categories [not null]
+}
+
+Table boardgame_mechanics {
+  id Int [pk, increment]
+  name String [not null]
+  bgg_id Int
+  bgg_link String [not null]
+  created_at DateTime [default: `now()`, not null]
+  boardgames boardgames_has_boardgames_mechanics [not null]
+}
+
+Table boardgame_skills {
+  id Int [pk, increment]
+  name String [not null]
+  emoji String [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+  user users [not null]
+}
+
+Table boardgames_has_boardgames_mechanics {
+  boardgame boardgames [not null]
+  boardgames_id Int [not null]
+  mechanic boardgame_mechanics [not null]
+  boardgame_mechanics_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (boardgames_id, boardgame_mechanics_id) [pk]
+  }
+}
+
+Table boardgames_has_boardgames_categories {
+  boardgame boardgames [not null]
+  boardgames_id Int [not null]
+  category boardgame_categories [not null]
+  boardgame_categories_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (boardgames_id, boardgame_categories_id) [pk]
+  }
+}
+
+Table boardgames {
+  id Int [pk, increment]
+  name String [not null]
+  short_description String
+  description String
+  year_released Int
+  rank Int [not null]
+  thumbnail String [not null]
+  image String [not null]
+  min_players Int
+  max_players Int
+  min_age Int
+  bgg_link String [not null]
+  bgg_id Int
+  bgg_rating Float [not null]
+  official_url String
+  avg_playtime String
+  designers String[] [not null]
+  artists String[] [not null]
+  difficulty String
+  owned Int
+  fans Int
+  nr_of_ratings Int
+  categories boardgames_has_boardgames_categories [not null]
+  mechanics boardgames_has_boardgames_mechanics [not null]
+  matchroom matchroom_has_boardgames [not null]
+  user_favorite_boardgames users_has_favorite_boardgames [not null]
+  places places_has_boardgames [not null]
+}
+
+Table achievement_difficulties {
+  id Int [pk, increment]
+  name String [not null]
+  color String [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+  achievements achievements [not null]
+}
+
+Table achievement_types {
+  id Int [pk, increment]
+  name String [not null]
+  icon String [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+  achievements achievements [not null]
+}
+
+Table achievements {
+  id Int [pk, increment]
+  name String [not null]
+  requirement String [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+  secret Boolean [not null, default: false]
+  title String
+  difficulty achievement_difficulties [not null]
+  achievement_difficulties_id Int [not null]
+  type achievement_types [not null]
+  achievement_types_id Int [not null]
+  users users_has_achievements [not null]
+}
+
+Table card_rarities {
+  id Int [pk, increment]
+  name String [not null]
+  chance Float [not null]
+  stock Int [not null]
+  gradient String[] [not null]
+  discount_value Int
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+  cards cards [not null]
+}
+
+Table card_attributes {
+  id Int [pk, increment]
+  name String [not null]
+  color String [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+  cards cards_has_card_attributes [not null]
+}
+
+Table cards_has_card_attributes {
+  card cards [not null]
+  cards_id Int [not null]
+  attribute card_attributes [not null]
+  card_attributes_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (cards_id, card_attributes_id) [pk]
+  }
+}
+
+Table cards {
+  id Int [pk, increment]
+  name String [not null]
+  image String [not null]
+  description String [not null]
+  external_url String
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+  rarity card_rarities [not null]
+  card_rarities_id Int [not null]
+  attributes cards_has_card_attributes [not null]
+  users users_has_cards [not null]
+}
+
+Table place_types {
+  id Int [pk, increment]
+  name String [not null]
+  emoji String
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+  places places_has_place_types [not null]
+  user_favorite_place_types users_has_favorite_places [not null]
+}
+
+Table places_has_place_types {
+  place places [not null]
+  places_id Int [not null]
+  type place_types [not null]
+  place_types_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (places_id, place_types_id) [pk]
+  }
+}
+
+Table places_has_boardgames {
+  place places [not null]
+  places_id Int [not null]
+  boardgames boardgames [not null]
+  boardgames_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (places_id, boardgames_id) [pk]
+  }
+}
+
+Table places {
+  id Int [pk, increment]
+  name String [not null]
+  address String [not null]
+  latitude Decimal [not null]
+  longitude Decimal [not null]
+  hours_open String [not null]
+  minimum_consumption Float
+  image String [not null]
+  average_rating Float [default: 0]
+  sells_boardgames Boolean [default: false]
+  city City [not null, default: 'AVEIRO']
+  open_days String[] [not null]
+  updated_at DateTime [not null]
+  created_at DateTime [default: `now()`, not null]
+  types places_has_place_types [not null]
+  user users
+  matchrooms matchrooms [not null]
+  boardgames places_has_boardgames [not null]
+  feedback place_users_feedbacks [not null]
+}
+
+Table place_users_feedbacks {
+  id Int [pk, increment]
+  feedback_rating Int [not null]
+  place places [not null]
+  place_id Int [not null]
+  matchroom matchrooms [not null]
+  matchroom_id Int [not null]
+  user users [not null]
+  user_id Int [not null]
+  created_at DateTime [default: `now()`, not null]
+  updated_at DateTime [not null]
+}
+
+Table matchroom_has_users {
+  matchroom matchrooms [not null]
+  matchrooms_id Int [not null]
+  user users [not null]
+  users_id Int [not null]
+  user_feedback Boolean
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (matchrooms_id, users_id) [pk]
+  }
+}
+
+Table matchroom_has_boardgames {
+  matchroom matchrooms [not null]
+  matchrooms_id Int [not null]
+  boardgame boardgames [not null]
+  boardgames_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (matchrooms_id, boardgames_id) [pk]
+  }
+}
+
+Table matchrooms {
+  id Int [pk, increment]
+  name String [not null]
+  description String
+  image String [not null]
+  private Boolean [not null, default: false]
+  invite_code String [unique, not null]
+  is_ongoing Boolean [not null, default: false]
+  finished Boolean [not null, default: false]
+  min_players Int [not null]
+  max_players Int [not null]
+  estimated_duration String [not null]
+  scheduled_date String [not null]
+  scheduled_hour String [not null]
+  scheduled_end_date String [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+  users matchroom_has_users [not null]
+  boardgames matchroom_has_boardgames [not null]
+  feedback place_users_feedbacks [not null]
+  place places [not null]
+  places_id Int [not null]
+  admin users [not null]
+  admin_id Int [not null]
+}
+
+Table users_has_achievements {
+  user users [not null]
+  users_id Int [not null]
+  achievement achievements [not null]
+  achievements_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (users_id, achievements_id) [pk]
+  }
+}
+
+Table users_has_cards {
+  user users [not null]
+  users_id Int [not null]
+  card cards [not null]
+  cards_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (users_id, cards_id) [pk]
+  }
+}
+
+Table users_has_favorite_boardgames {
+  user users [not null]
+  users_id Int [not null]
+  boardgame boardgames [not null]
+  boardgames_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (users_id, boardgames_id) [pk]
+  }
+}
+
+Table users_has_favorite_boardgame_categories {
+  user users [not null]
+  users_id Int [not null]
+  boardgame_category boardgame_categories [not null]
+  boardgame_categories_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (users_id, boardgame_categories_id) [pk]
+  }
+}
+
+Table users_has_favorite_places {
+  user users [not null]
+  users_id Int [not null]
+  place_type place_types [not null]
+  place_types_id Int [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (users_id, place_types_id) [pk]
+  }
+}
+
+Table users {
+  id Int [pk, increment]
+  email String [unique]
+  name String [not null]
+  username String [unique, not null]
+  provider_name String
+  provider_token String
+  password String
+  title String [default: '']
+  avatar String [not null]
+  calibrated Boolean
+  matches_played Int [not null, default: 0]
+  favorite_days String[] [not null]
+  role Role [not null, default: 'USER']
+  premium Boolean [not null, default: false]
+  premium_expires DateTime
+  boardgame_skill boardgame_skills
+  boardgame_skills_id Int
+  place places
+  places_id Int [unique]
+  matchroom_admins matchrooms [not null]
+  matchrooms matchroom_has_users [not null]
+  achievements users_has_achievements [not null]
+  cards users_has_cards [not null]
+  favorite_boardgames users_has_favorite_boardgames [not null]
+  favorite_boardgame_categories users_has_favorite_boardgame_categories [not null]
+  favorite_place_types users_has_favorite_places [not null]
+  feedback place_users_feedbacks [not null]
+  bug_report UserBugReport [not null]
+  follower user_follows [not null]
+  following user_follows [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+}
+
+Table user_follows {
+  follower users [not null]
+  follower_id Int [not null]
+  following users [not null]
+  following_id Int [not null]
+  created_at DateTime [default: `now()`, not null]
+
+  indexes {
+    (follower_id, following_id) [pk]
+  }
+}
+
+Table UserBugReport {
+  id Int [pk, increment]
+  description String [not null]
+  user_id Int [not null]
+  user users [not null]
+  updated_at DateTime
+  created_at DateTime [default: `now()`, not null]
+}
+
+Enum City {
+  AVEIRO
+  PORTO
+  LISBOA
+  BRAGA
+  VISEU
+  ESPINHO
+  COIMBRA
+  FARO
+  PORTIMAO
+  FUNCHAL
+  PONTA_DELGADA
+  LEIRIA
+  GUARDA
+  BRAGANCA
+  VILA_NOVA_DE_GAIA
+  GUIMARAES
+  SINTRA
+  BEJA
+  EVORA
+}
+
+Enum Role {
+  USER
+  ADMIN
+  PLACE
+}
+
+Ref: boardgames_has_boardgames_mechanics.boardgames_id > boardgames.id
+
+Ref: boardgames_has_boardgames_mechanics.boardgame_mechanics_id > boardgame_mechanics.id
+
+Ref: boardgames_has_boardgames_categories.boardgames_id > boardgames.id
+
+Ref: boardgames_has_boardgames_categories.boardgame_categories_id > boardgame_categories.id
+
+Ref: achievements.achievement_difficulties_id > achievement_difficulties.id
+
+Ref: achievements.achievement_types_id > achievement_types.id
+
+Ref: cards_has_card_attributes.cards_id > cards.id
+
+Ref: cards_has_card_attributes.card_attributes_id > card_attributes.id
+
+Ref: cards.card_rarities_id > card_rarities.id
+
+Ref: places_has_place_types.places_id > places.id
+
+Ref: places_has_place_types.place_types_id > place_types.id
+
+Ref: places_has_boardgames.places_id > places.id
+
+Ref: places_has_boardgames.boardgames_id > boardgames.id
+
+Ref: place_users_feedbacks.place_id > places.id
+
+Ref: place_users_feedbacks.matchroom_id > matchrooms.id
+
+Ref: place_users_feedbacks.user_id > users.id
+
+Ref: matchroom_has_users.matchrooms_id > matchrooms.id
+
+Ref: matchroom_has_users.users_id > users.id
+
+Ref: matchroom_has_boardgames.matchrooms_id > matchrooms.id
+
+Ref: matchroom_has_boardgames.boardgames_id > boardgames.id
+
+Ref: matchrooms.places_id > places.id
+
+Ref: matchrooms.admin_id > users.id
+
+Ref: users_has_achievements.users_id > users.id
+
+Ref: users_has_achievements.achievements_id > achievements.id
+
+Ref: users_has_cards.users_id > users.id
+
+Ref: users_has_cards.cards_id > cards.id
+
+Ref: users_has_favorite_boardgames.users_id > users.id
+
+Ref: users_has_favorite_boardgames.boardgames_id > boardgames.id
+
+Ref: users_has_favorite_boardgame_categories.users_id > users.id
+
+Ref: users_has_favorite_boardgame_categories.boardgame_categories_id > boardgame_categories.id
+
+Ref: users_has_favorite_places.users_id > users.id
+
+Ref: users_has_favorite_places.place_types_id > place_types.id
+
+Ref: users.boardgame_skills_id > boardgame_skills.id
+
+Ref: users.places_id - places.id
+
+Ref: user_follows.follower_id > users.id
+
+Ref: user_follows.following_id > users.id
+
+Ref: UserBugReport.user_id > users.id

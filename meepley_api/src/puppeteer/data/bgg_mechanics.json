@@ -1,0 +1,767 @@
+[
+  {
+    "name": "Acting",
+    "bgg_id": 2073,
+    "bgg_link": "/boardgamemechanic/2073/acting"
+  },
+  {
+    "name": "Action Drafting",
+    "bgg_id": 2838,
+    "bgg_link": "/boardgamemechanic/2838/action-drafting"
+  },
+  {
+    "name": "Action Points",
+    "bgg_id": 2001,
+    "bgg_link": "/boardgamemechanic/2001/action-points"
+  },
+  {
+    "name": "Action Queue",
+    "bgg_id": 2689,
+    "bgg_link": "/boardgamemechanic/2689/action-queue"
+  },
+  {
+    "name": "Action Retrieval",
+    "bgg_id": 2839,
+    "bgg_link": "/boardgamemechanic/2839/action-retrieval"
+  },
+  {
+    "name": "Action Timer",
+    "bgg_id": 2834,
+    "bgg_link": "/boardgamemechanic/2834/action-timer"
+  },
+  {
+    "name": "Action/Event",
+    "bgg_id": 2840,
+    "bgg_link": "/boardgamemechanic/2840/actionevent"
+  },
+  {
+    "name": "Advantage Token",
+    "bgg_id": 2847,
+    "bgg_link": "/boardgamemechanic/2847/advantage-token"
+  },
+  {
+    "name": "Alliances",
+    "bgg_id": 2916,
+    "bgg_link": "/boardgamemechanic/2916/alliances"
+  },
+  {
+    "name": "Area Majority / Influence",
+    "bgg_id": 2080,
+    "bgg_link": "/boardgamemechanic/2080/area-majority-influence"
+  },
+  {
+    "name": "Area Movement",
+    "bgg_id": 2046,
+    "bgg_link": "/boardgamemechanic/2046/area-movement"
+  },
+  {
+    "name": "Area-Impulse",
+    "bgg_id": 2021,
+    "bgg_link": "/boardgamemechanic/2021/area-impulse"
+  },
+  {
+    "name": "Auction/Bidding",
+    "bgg_id": 2012,
+    "bgg_link": "/boardgamemechanic/2012/auctionbidding"
+  },
+  {
+    "name": "Automatic Resource Growth",
+    "bgg_id": 2903,
+    "bgg_link": "/boardgamemechanic/2903/automatic-resource-growth"
+  },
+  {
+    "name": "Betting and Bluffing",
+    "bgg_id": 2014,
+    "bgg_link": "/boardgamemechanic/2014/betting-and-bluffing"
+  },
+  {
+    "name": "Bribery",
+    "bgg_id": 2913,
+    "bgg_link": "/boardgamemechanic/2913/bribery"
+  },
+  {
+    "name": "Campaign / Battle Card Driven",
+    "bgg_id": 2018,
+    "bgg_link": "/boardgamemechanic/2018/campaign-battle-card-driven"
+  },
+  {
+    "name": "Card Play Conflict Resolution",
+    "bgg_id": 2857,
+    "bgg_link": "/boardgamemechanic/2857/card-play-conflict-resolution"
+  },
+  {
+    "name": "Catch the Leader",
+    "bgg_id": 2887,
+    "bgg_link": "/boardgamemechanic/2887/catch-leader"
+  },
+  {
+    "name": "Closed Drafting",
+    "bgg_id": 2984,
+    "bgg_link": "/boardgamemechanic/2984/closed-drafting"
+  },
+  {
+    "name": "Closed Economy Auction",
+    "bgg_id": 2928,
+    "bgg_link": "/boardgamemechanic/2928/closed-economy-auction"
+  },
+  {
+    "name": "Command Cards",
+    "bgg_id": 2841,
+    "bgg_link": "/boardgamemechanic/2841/command-cards"
+  },
+  {
+    "name": "Communication Limits",
+    "bgg_id": 2893,
+    "bgg_link": "/boardgamemechanic/2893/communication-limits"
+  },
+  {
+    "name": "Connections",
+    "bgg_id": 2883,
+    "bgg_link": "/boardgamemechanic/2883/connections"
+  },
+  {
+    "name": "Constrained Bidding",
+    "bgg_id": 2922,
+    "bgg_link": "/boardgamemechanic/2922/constrained-bidding"
+  },
+  {
+    "name": "Contracts",
+    "bgg_id": 2912,
+    "bgg_link": "/boardgamemechanic/2912/contracts"
+  },
+  {
+    "name": "Cooperative Game",
+    "bgg_id": 2023,
+    "bgg_link": "/boardgamemechanic/2023/cooperative-game"
+  },
+  {
+    "name": "Critical Hits and Failures",
+    "bgg_id": 2854,
+    "bgg_link": "/boardgamemechanic/2854/critical-hits-and-failures"
+  },
+  {
+    "name": "Cube Tower",
+    "bgg_id": 2990,
+    "bgg_link": "/boardgamemechanic/2990/cube-tower"
+  },
+  {
+    "name": "Deck Construction",
+    "bgg_id": 3004,
+    "bgg_link": "/boardgamemechanic/3004/deck-construction"
+  },
+  {
+    "name": "Deduction",
+    "bgg_id": 3002,
+    "bgg_link": "/boardgamemechanic/3002/deduction"
+  },
+  {
+    "name": "Delayed Purchase",
+    "bgg_id": 2901,
+    "bgg_link": "/boardgamemechanic/2901/delayed-purchase"
+  },
+  {
+    "name": "Dice Rolling",
+    "bgg_id": 2072,
+    "bgg_link": "/boardgamemechanic/2072/dice-rolling"
+  },
+  {
+    "name": "Die Icon Resolution",
+    "bgg_id": 2856,
+    "bgg_link": "/boardgamemechanic/2856/die-icon-resolution"
+  },
+  {
+    "name": "Different Dice Movement",
+    "bgg_id": 2950,
+    "bgg_link": "/boardgamemechanic/2950/different-dice-movement"
+  },
+  {
+    "name": "Elapsed Real Time Ending",
+    "bgg_id": 2882,
+    "bgg_link": "/boardgamemechanic/2882/elapsed-real-time-ending"
+  },
+  {
+    "name": "Enclosure",
+    "bgg_id": 2043,
+    "bgg_link": "/boardgamemechanic/2043/enclosure"
+  },
+  {
+    "name": "End Game Bonuses",
+    "bgg_id": 2875,
+    "bgg_link": "/boardgamemechanic/2875/end-game-bonuses"
+  },
+  {
+    "name": "Events",
+    "bgg_id": 2850,
+    "bgg_link": "/boardgamemechanic/2850/events"
+  },
+  {
+    "name": "Finale Ending",
+    "bgg_id": 2885,
+    "bgg_link": "/boardgamemechanic/2885/finale-ending"
+  },
+  {
+    "name": "Flicking",
+    "bgg_id": 2860,
+    "bgg_link": "/boardgamemechanic/2860/flicking"
+  },
+  {
+    "name": "Follow",
+    "bgg_id": 2843,
+    "bgg_link": "/boardgamemechanic/2843/follow"
+  },
+  {
+    "name": "Grid Coverage",
+    "bgg_id": 2978,
+    "bgg_link": "/boardgamemechanic/2978/grid-coverage"
+  },
+  {
+    "name": "Grid Movement",
+    "bgg_id": 2676,
+    "bgg_link": "/boardgamemechanic/2676/grid-movement"
+  },
+  {
+    "name": "Hand Management",
+    "bgg_id": 2040,
+    "bgg_link": "/boardgamemechanic/2040/hand-management"
+  },
+  {
+    "name": "Hexagon Grid",
+    "bgg_id": 2026,
+    "bgg_link": "/boardgamemechanic/2026/hexagon-grid"
+  },
+  {
+    "name": "Hidden Movement",
+    "bgg_id": 2967,
+    "bgg_link": "/boardgamemechanic/2967/hidden-movement"
+  },
+  {
+    "name": "Hidden Roles",
+    "bgg_id": 2891,
+    "bgg_link": "/boardgamemechanic/2891/hidden-roles"
+  },
+  {
+    "name": "Hidden Victory Points",
+    "bgg_id": 2987,
+    "bgg_link": "/boardgamemechanic/2987/hidden-victory-points"
+  },
+  {
+    "name": "Highest-Lowest Scoring",
+    "bgg_id": 2889,
+    "bgg_link": "/boardgamemechanic/2889/highest-lowest-scoring"
+  },
+  {
+    "name": "Impulse Movement",
+    "bgg_id": 2952,
+    "bgg_link": "/boardgamemechanic/2952/impulse-movement"
+  },
+  {
+    "name": "Income",
+    "bgg_id": 2902,
+    "bgg_link": "/boardgamemechanic/2902/income"
+  },
+  {
+    "name": "Increase Value of Unchosen Resources",
+    "bgg_id": 2914,
+    "bgg_link": "/boardgamemechanic/2914/increase-value-unchosen-resources"
+  },
+  {
+    "name": "Induction",
+    "bgg_id": 3003,
+    "bgg_link": "/boardgamemechanic/3003/induction"
+  },
+  {
+    "name": "Investment",
+    "bgg_id": 2910,
+    "bgg_link": "/boardgamemechanic/2910/investment"
+  },
+  {
+    "name": "Kill Steal",
+    "bgg_id": 2871,
+    "bgg_link": "/boardgamemechanic/2871/kill-steal"
+  },
+  {
+    "name": "King of the Hill",
+    "bgg_id": 2886,
+    "bgg_link": "/boardgamemechanic/2886/king-hill"
+  },
+  {
+    "name": "Ladder Climbing",
+    "bgg_id": 2980,
+    "bgg_link": "/boardgamemechanic/2980/ladder-climbing"
+  },
+  {
+    "name": "Layering",
+    "bgg_id": 3001,
+    "bgg_link": "/boardgamemechanic/3001/layering"
+  },
+  {
+    "name": "Legacy Game",
+    "bgg_id": 2824,
+    "bgg_link": "/boardgamemechanic/2824/legacy-game"
+  },
+  {
+    "name": "Line Drawing",
+    "bgg_id": 2039,
+    "bgg_link": "/boardgamemechanic/2039/line-drawing"
+  },
+  {
+    "name": "Line of Sight",
+    "bgg_id": 2975,
+    "bgg_link": "/boardgamemechanic/2975/line-sight"
+  },
+  {
+    "name": "Loans",
+    "bgg_id": 2904,
+    "bgg_link": "/boardgamemechanic/2904/loans"
+  },
+  {
+    "name": "Lose a Turn",
+    "bgg_id": 2836,
+    "bgg_link": "/boardgamemechanic/2836/lose-turn"
+  },
+  {
+    "name": "Map Addition",
+    "bgg_id": 2959,
+    "bgg_link": "/boardgamemechanic/2959/map-addition"
+  },
+  {
+    "name": "Map Deformation",
+    "bgg_id": 2961,
+    "bgg_link": "/boardgamemechanic/2961/map-deformation"
+  },
+  {
+    "name": "Map Reduction",
+    "bgg_id": 2960,
+    "bgg_link": "/boardgamemechanic/2960/map-reduction"
+  },
+  {
+    "name": "Market",
+    "bgg_id": 2900,
+    "bgg_link": "/boardgamemechanic/2900/market"
+  },
+  {
+    "name": "Matching",
+    "bgg_id": 3007,
+    "bgg_link": "/boardgamemechanic/3007/matching"
+  },
+  {
+    "name": "Measurement Movement",
+    "bgg_id": 2949,
+    "bgg_link": "/boardgamemechanic/2949/measurement-movement"
+  },
+  {
+    "name": "Melding and Splaying",
+    "bgg_id": 2981,
+    "bgg_link": "/boardgamemechanic/2981/melding-and-splaying"
+  },
+  {
+    "name": "Memory",
+    "bgg_id": 2047,
+    "bgg_link": "/boardgamemechanic/2047/memory"
+  },
+  {
+    "name": "Minimap Resolution",
+    "bgg_id": 2863,
+    "bgg_link": "/boardgamemechanic/2863/minimap-resolution"
+  },
+  {
+    "name": "Modular Board",
+    "bgg_id": 2011,
+    "bgg_link": "/boardgamemechanic/2011/modular-board"
+  },
+  {
+    "name": "Move Through Deck",
+    "bgg_id": 2962,
+    "bgg_link": "/boardgamemechanic/2962/move-through-deck"
+  },
+  {
+    "name": "Movement Points",
+    "bgg_id": 2947,
+    "bgg_link": "/boardgamemechanic/2947/movement-points"
+  },
+  {
+    "name": "Movement Template",
+    "bgg_id": 2963,
+    "bgg_link": "/boardgamemechanic/2963/movement-template"
+  },
+  {
+    "name": "Moving Multiple Units",
+    "bgg_id": 2958,
+    "bgg_link": "/boardgamemechanic/2958/moving-multiple-units"
+  },
+  {
+    "name": "Multiple Maps",
+    "bgg_id": 2965,
+    "bgg_link": "/boardgamemechanic/2965/multiple-maps"
+  },
+  {
+    "name": "Narrative Choice / Paragraph",
+    "bgg_id": 2851,
+    "bgg_link": "/boardgamemechanic/2851/narrative-choice-paragraph"
+  },
+  {
+    "name": "Negotiation",
+    "bgg_id": 2915,
+    "bgg_link": "/boardgamemechanic/2915/negotiation"
+  },
+  {
+    "name": "Network and Route Building",
+    "bgg_id": 2081,
+    "bgg_link": "/boardgamemechanic/2081/network-and-route-building"
+  },
+  {
+    "name": "Once-Per-Game Abilities",
+    "bgg_id": 2846,
+    "bgg_link": "/boardgamemechanic/2846/once-game-abilities"
+  },
+  {
+    "name": "Open Drafting",
+    "bgg_id": 2041,
+    "bgg_link": "/boardgamemechanic/2041/open-drafting"
+  },
+  {
+    "name": "Order Counters",
+    "bgg_id": 2844,
+    "bgg_link": "/boardgamemechanic/2844/order-counters"
+  },
+  {
+    "name": "Ownership",
+    "bgg_id": 2911,
+    "bgg_link": "/boardgamemechanic/2911/ownership"
+  },
+  {
+    "name": "Paper-and-Pencil",
+    "bgg_id": 2055,
+    "bgg_link": "/boardgamemechanic/2055/paper-and-pencil"
+  },
+  {
+    "name": "Passed Action Token",
+    "bgg_id": 2835,
+    "bgg_link": "/boardgamemechanic/2835/passed-action-token"
+  },
+  {
+    "name": "Pattern Building",
+    "bgg_id": 2048,
+    "bgg_link": "/boardgamemechanic/2048/pattern-building"
+  },
+  {
+    "name": "Pattern Movement",
+    "bgg_id": 2946,
+    "bgg_link": "/boardgamemechanic/2946/pattern-movement"
+  },
+  {
+    "name": "Pattern Recognition",
+    "bgg_id": 2060,
+    "bgg_link": "/boardgamemechanic/2060/pattern-recognition"
+  },
+  {
+    "name": "Physical Removal",
+    "bgg_id": 2989,
+    "bgg_link": "/boardgamemechanic/2989/physical-removal"
+  },
+  {
+    "name": "Pick-up and Deliver",
+    "bgg_id": 2007,
+    "bgg_link": "/boardgamemechanic/2007/pick-and-deliver"
+  },
+  {
+    "name": "Player Elimination",
+    "bgg_id": 2685,
+    "bgg_link": "/boardgamemechanic/2685/player-elimination"
+  },
+  {
+    "name": "Player Judge",
+    "bgg_id": 2865,
+    "bgg_link": "/boardgamemechanic/2865/player-judge"
+  },
+  {
+    "name": "Point to Point Movement",
+    "bgg_id": 2078,
+    "bgg_link": "/boardgamemechanic/2078/point-point-movement"
+  },
+  {
+    "name": "Predictive Bid",
+    "bgg_id": 3006,
+    "bgg_link": "/boardgamemechanic/3006/predictive-bid"
+  },
+  {
+    "name": "Prisoner's Dilemma",
+    "bgg_id": 2858,
+    "bgg_link": "/boardgamemechanic/2858/prisoners-dilemma"
+  },
+  {
+    "name": "Programmed Movement",
+    "bgg_id": 2953,
+    "bgg_link": "/boardgamemechanic/2953/programmed-movement"
+  },
+  {
+    "name": "Push Your Luck",
+    "bgg_id": 2661,
+    "bgg_link": "/boardgamemechanic/2661/push-your-luck"
+  },
+  {
+    "name": "Race",
+    "bgg_id": 2876,
+    "bgg_link": "/boardgamemechanic/2876/race"
+  },
+  {
+    "name": "Random Production",
+    "bgg_id": 2909,
+    "bgg_link": "/boardgamemechanic/2909/random-production"
+  },
+  {
+    "name": "Ratio / Combat Results Table",
+    "bgg_id": 2855,
+    "bgg_link": "/boardgamemechanic/2855/ratio-combat-results-table"
+  },
+  {
+    "name": "Re-rolling and Locking",
+    "bgg_id": 2870,
+    "bgg_link": "/boardgamemechanic/2870/re-rolling-and-locking"
+  },
+  {
+    "name": "Real-Time",
+    "bgg_id": 2831,
+    "bgg_link": "/boardgamemechanic/2831/real-time"
+  },
+  {
+    "name": "Relative Movement",
+    "bgg_id": 2954,
+    "bgg_link": "/boardgamemechanic/2954/relative-movement"
+  },
+  {
+    "name": "Resource to Move",
+    "bgg_id": 2948,
+    "bgg_link": "/boardgamemechanic/2948/resource-move"
+  },
+  {
+    "name": "Rock-Paper-Scissors",
+    "bgg_id": 2003,
+    "bgg_link": "/boardgamemechanic/2003/rock-paper-scissors"
+  },
+  {
+    "name": "Role Playing",
+    "bgg_id": 2028,
+    "bgg_link": "/boardgamemechanic/2028/role-playing"
+  },
+  {
+    "name": "Roles with Asymmetric Information",
+    "bgg_id": 2892,
+    "bgg_link": "/boardgamemechanic/2892/roles-asymmetric-information"
+  },
+  {
+    "name": "Roll / Spin and Move",
+    "bgg_id": 2035,
+    "bgg_link": "/boardgamemechanic/2035/roll-spin-and-move"
+  },
+  {
+    "name": "Scenario / Mission / Campaign Game",
+    "bgg_id": 2822,
+    "bgg_link": "/boardgamemechanic/2822/scenario-mission-campaign-game"
+  },
+  {
+    "name": "Score-and-Reset Game",
+    "bgg_id": 2823,
+    "bgg_link": "/boardgamemechanic/2823/score-and-reset-game"
+  },
+  {
+    "name": "Secret Unit Deployment",
+    "bgg_id": 2016,
+    "bgg_link": "/boardgamemechanic/2016/secret-unit-deployment"
+  },
+  {
+    "name": "Semi-Cooperative Game",
+    "bgg_id": 2820,
+    "bgg_link": "/boardgamemechanic/2820/semi-cooperative-game"
+  },
+  {
+    "name": "Set Collection",
+    "bgg_id": 2004,
+    "bgg_link": "/boardgamemechanic/2004/set-collection"
+  },
+  {
+    "name": "Simulation",
+    "bgg_id": 2070,
+    "bgg_link": "/boardgamemechanic/2070/simulation"
+  },
+  {
+    "name": "Simultaneous Action Selection",
+    "bgg_id": 2020,
+    "bgg_link": "/boardgamemechanic/2020/simultaneous-action-selection"
+  },
+  {
+    "name": "Singing",
+    "bgg_id": 2038,
+    "bgg_link": "/boardgamemechanic/2038/singing"
+  },
+  {
+    "name": "Single Loser Game",
+    "bgg_id": 2821,
+    "bgg_link": "/boardgamemechanic/2821/single-loser-game"
+  },
+  {
+    "name": "Slide/Push",
+    "bgg_id": 3005,
+    "bgg_link": "/boardgamemechanic/3005/slidepush"
+  },
+  {
+    "name": "Solo / Solitaire Game",
+    "bgg_id": 2819,
+    "bgg_link": "/boardgamemechanic/2819/solo-solitaire-game"
+  },
+  {
+    "name": "Speed Matching",
+    "bgg_id": 2991,
+    "bgg_link": "/boardgamemechanic/2991/speed-matching"
+  },
+  {
+    "name": "Square Grid",
+    "bgg_id": 2940,
+    "bgg_link": "/boardgamemechanic/2940/square-grid"
+  },
+  {
+    "name": "Stacking and Balancing",
+    "bgg_id": 2988,
+    "bgg_link": "/boardgamemechanic/2988/stacking-and-balancing"
+  },
+  {
+    "name": "Stat Check Resolution",
+    "bgg_id": 2853,
+    "bgg_link": "/boardgamemechanic/2853/stat-check-resolution"
+  },
+  {
+    "name": "Static Capture",
+    "bgg_id": 2861,
+    "bgg_link": "/boardgamemechanic/2861/static-capture"
+  },
+  {
+    "name": "Storytelling",
+    "bgg_id": 2027,
+    "bgg_link": "/boardgamemechanic/2027/storytelling"
+  },
+  {
+    "name": "Sudden Death Ending",
+    "bgg_id": 2884,
+    "bgg_link": "/boardgamemechanic/2884/sudden-death-ending"
+  },
+  {
+    "name": "Targeted Clues",
+    "bgg_id": 2866,
+    "bgg_link": "/boardgamemechanic/2866/targeted-clues"
+  },
+  {
+    "name": "Team-Based Game",
+    "bgg_id": 2019,
+    "bgg_link": "/boardgamemechanic/2019/team-based-game"
+  },
+  {
+    "name": "Tech Trees / Tech Tracks",
+    "bgg_id": 2849,
+    "bgg_link": "/boardgamemechanic/2849/tech-trees-tech-tracks"
+  },
+  {
+    "name": "Three Dimensional Movement",
+    "bgg_id": 2944,
+    "bgg_link": "/boardgamemechanic/2944/three-dimensional-movement"
+  },
+  {
+    "name": "Tile Placement",
+    "bgg_id": 2002,
+    "bgg_link": "/boardgamemechanic/2002/tile-placement"
+  },
+  {
+    "name": "Time Track",
+    "bgg_id": 2663,
+    "bgg_link": "/boardgamemechanic/2663/time-track"
+  },
+  {
+    "name": "Track Movement",
+    "bgg_id": 2939,
+    "bgg_link": "/boardgamemechanic/2939/track-movement"
+  },
+  {
+    "name": "Trading",
+    "bgg_id": 2008,
+    "bgg_link": "/boardgamemechanic/2008/trading"
+  },
+  {
+    "name": "Traitor Game",
+    "bgg_id": 2814,
+    "bgg_link": "/boardgamemechanic/2814/traitor-game"
+  },
+  {
+    "name": "Trick-taking",
+    "bgg_id": 2009,
+    "bgg_link": "/boardgamemechanic/2009/trick-taking"
+  },
+  {
+    "name": "Tug of War",
+    "bgg_id": 2888,
+    "bgg_link": "/boardgamemechanic/2888/tug-war"
+  },
+  {
+    "name": "Turn Order: Auction",
+    "bgg_id": 2827,
+    "bgg_link": "/boardgamemechanic/2827/turn-order-auction"
+  },
+  {
+    "name": "Turn Order: Claim Action",
+    "bgg_id": 2829,
+    "bgg_link": "/boardgamemechanic/2829/turn-order-claim-action"
+  },
+  {
+    "name": "Turn Order: Pass Order",
+    "bgg_id": 2830,
+    "bgg_link": "/boardgamemechanic/2830/turn-order-pass-order"
+  },
+  {
+    "name": "Turn Order: Progressive",
+    "bgg_id": 2828,
+    "bgg_link": "/boardgamemechanic/2828/turn-order-progressive"
+  },
+  {
+    "name": "Turn Order: Random",
+    "bgg_id": 2985,
+    "bgg_link": "/boardgamemechanic/2985/turn-order-random"
+  },
+  {
+    "name": "Turn Order: Role Order",
+    "bgg_id": 2833,
+    "bgg_link": "/boardgamemechanic/2833/turn-order-role-order"
+  },
+  {
+    "name": "Turn Order: Stat-Based",
+    "bgg_id": 2826,
+    "bgg_link": "/boardgamemechanic/2826/turn-order-stat-based"
+  },
+  {
+    "name": "Variable Phase Order",
+    "bgg_id": 2079,
+    "bgg_link": "/boardgamemechanic/2079/variable-phase-order"
+  },
+  {
+    "name": "Variable Player Powers",
+    "bgg_id": 2015,
+    "bgg_link": "/boardgamemechanic/2015/variable-player-powers"
+  },
+  {
+    "name": "Variable Set-up",
+    "bgg_id": 2897,
+    "bgg_link": "/boardgamemechanic/2897/variable-set"
+  },
+  {
+    "name": "Voting",
+    "bgg_id": 2017,
+    "bgg_link": "/boardgamemechanic/2017/voting"
+  },
+  {
+    "name": "Worker Placement",
+    "bgg_id": 2082,
+    "bgg_link": "/boardgamemechanic/2082/worker-placement"
+  },
+  {
+    "name": "Zone of Control",
+    "bgg_id": 2974,
+    "bgg_link": "/boardgamemechanic/2974/zone-control"
+  }
+]

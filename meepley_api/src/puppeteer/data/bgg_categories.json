@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Abstract Strategy",
+    "bgg_id": 1009,
+    "bgg_link": "/boardgamecategory/1009/abstract-strategy"
+  },
+  {
+    "name": "Action / Dexterity",
+    "bgg_id": 1032,
+    "bgg_link": "/boardgamecategory/1032/action-dexterity"
+  },
+  {
+    "name": "Adventure",
+    "bgg_id": 1022,
+    "bgg_link": "/boardgamecategory/1022/adventure"
+  },
+  {
+    "name": "Age of Reason",
+    "bgg_id": 2726,
+    "bgg_link": "/boardgamecategory/2726/age-reason"
+  },
+  {
+    "name": "American West",
+    "bgg_id": 1055,
+    "bgg_link": "/boardgamecategory/1055/american-west"
+  },
+  {
+    "name": "Ancient",
+    "bgg_id": 1050,
+    "bgg_link": "/boardgamecategory/1050/ancient"
+  },
+  {
+    "name": "Animals",
+    "bgg_id": 1089,
+    "bgg_link": "/boardgamecategory/1089/animals"
+  },
+  {
+    "name": "Arabian",
+    "bgg_id": 1052,
+    "bgg_link": "/boardgamecategory/1052/arabian"
+  },
+  {
+    "name": "Aviation / Flight",
+    "bgg_id": 2650,
+    "bgg_link": "/boardgamecategory/2650/aviation-flight"
+  },
+  {
+    "name": "Bluffing",
+    "bgg_id": 1023,
+    "bgg_link": "/boardgamecategory/1023/bluffing"
+  },
+  {
+    "name": "Book",
+    "bgg_id": 1117,
+    "bgg_link": "/boardgamecategory/1117/book"
+  },
+  {
+    "name": "Card Game",
+    "bgg_id": 1002,
+    "bgg_link": "/boardgamecategory/1002/card-game"
+  },
+  {
+    "name": "Children's Game",
+    "bgg_id": 1041,
+    "bgg_link": "/boardgamecategory/1041/childrens-game"
+  },
+  {
+    "name": "City Building",
+    "bgg_id": 1029,
+    "bgg_link": "/boardgamecategory/1029/city-building"
+  },
+  {
+    "name": "Civilization",
+    "bgg_id": 1015,
+    "bgg_link": "/boardgamecategory/1015/civilization"
+  },
+  {
+    "name": "Comic Book / Strip",
+    "bgg_id": 1116,
+    "bgg_link": "/boardgamecategory/1116/comic-book-strip"
+  },
+  {
+    "name": "Deduction",
+    "bgg_id": 1039,
+    "bgg_link": "/boardgamecategory/1039/deduction"
+  },
+  {
+    "name": "Dice",
+    "bgg_id": 1017,
+    "bgg_link": "/boardgamecategory/1017/dice"
+  },
+  {
+    "name": "Economic",
+    "bgg_id": 1021,
+    "bgg_link": "/boardgamecategory/1021/economic"
+  },
+  {
+    "name": "Educational",
+    "bgg_id": 1094,
+    "bgg_link": "/boardgamecategory/1094/educational"
+  },
+  {
+    "name": "Electronic",
+    "bgg_id": 1072,
+    "bgg_link": "/boardgamecategory/1072/electronic"
+  },
+  {
+    "name": "Environmental",
+    "bgg_id": 1084,
+    "bgg_link": "/boardgamecategory/1084/environmental"
+  },
+  {
+    "name": "Exploration",
+    "bgg_id": 1020,
+    "bgg_link": "/boardgamecategory/1020/exploration"
+  },
+  {
+    "name": "Fantasy",
+    "bgg_id": 1010,
+    "bgg_link": "/boardgamecategory/1010/fantasy"
+  },
+  {
+    "name": "Farming",
+    "bgg_id": 1013,
+    "bgg_link": "/boardgamecategory/1013/farming"
+  },
+  {
+    "name": "Fighting",
+    "bgg_id": 1046,
+    "bgg_link": "/boardgamecategory/1046/fighting"
+  },
+  {
+    "name": "Game System",
+    "bgg_id": 1119,
+    "bgg_link": "/boardgamecategory/1119/game-system"
+  },
+  {
+    "name": "Horror",
+    "bgg_id": 1024,
+    "bgg_link": "/boardgamecategory/1024/horror"
+  },
+  {
+    "name": "Humor",
+    "bgg_id": 1079,
+    "bgg_link": "/boardgamecategory/1079/humor"
+  },
+  {
+    "name": "Industry / Manufacturing",
+    "bgg_id": 1088,
+    "bgg_link": "/boardgamecategory/1088/industry-manufacturing"
+  },
+  {
+    "name": "Mafia",
+    "bgg_id": 1033,
+    "bgg_link": "/boardgamecategory/1033/mafia"
+  },
+  {
+    "name": "Math",
+    "bgg_id": 1104,
+    "bgg_link": "/boardgamecategory/1104/math"
+  },
+  {
+    "name": "Mature / Adult",
+    "bgg_id": 1118,
+    "bgg_link": "/boardgamecategory/1118/mature-adult"
+  },
+  {
+    "name": "Maze",
+    "bgg_id": 1059,
+    "bgg_link": "/boardgamecategory/1059/maze"
+  },
+  {
+    "name": "Medical",
+    "bgg_id": 2145,
+    "bgg_link": "/boardgamecategory/2145/medical"
+  },
+  {
+    "name": "Medieval",
+    "bgg_id": 1035,
+    "bgg_link": "/boardgamecategory/1035/medieval"
+  },
+  {
+    "name": "Memory",
+    "bgg_id": 1045,
+    "bgg_link": "/boardgamecategory/1045/memory"
+  },
+  {
+    "name": "Miniatures",
+    "bgg_id": 1047,
+    "bgg_link": "/boardgamecategory/1047/miniatures"
+  },
+  {
+    "name": "Modern Warfare",
+    "bgg_id": 1069,
+    "bgg_link": "/boardgamecategory/1069/modern-warfare"
+  },
+  {
+    "name": "Movies / TV / Radio theme",
+    "bgg_id": 1064,
+    "bgg_link": "/boardgamecategory/1064/movies-tv-radio-theme"
+  },
+  {
+    "name": "Murder/Mystery",
+    "bgg_id": 1040,
+    "bgg_link": "/boardgamecategory/1040/murdermystery"
+  },
+  {
+    "name": "Music",
+    "bgg_id": 1054,
+    "bgg_link": "/boardgamecategory/1054/music"
+  },
+  {
+    "name": "Mythology",
+    "bgg_id": 1082,
+    "bgg_link": "/boardgamecategory/1082/mythology"
+  },
+  {
+    "name": "Nautical",
+    "bgg_id": 1008,
+    "bgg_link": "/boardgamecategory/1008/nautical"
+  },
+  {
+    "name": "Negotiation",
+    "bgg_id": 1026,
+    "bgg_link": "/boardgamecategory/1026/negotiation"
+  },
+  {
+    "name": "Novel-based",
+    "bgg_id": 1093,
+    "bgg_link": "/boardgamecategory/1093/novel-based"
+  },
+  {
+    "name": "Number",
+    "bgg_id": 1098,
+    "bgg_link": "/boardgamecategory/1098/number"
+  },
+  {
+    "name": "Party Game",
+    "bgg_id": 1030,
+    "bgg_link": "/boardgamecategory/1030/party-game"
+  },
+  {
+    "name": "Pirates",
+    "bgg_id": 1090,
+    "bgg_link": "/boardgamecategory/1090/pirates"
+  },
+  {
+    "name": "Political",
+    "bgg_id": 1001,
+    "bgg_link": "/boardgamecategory/1001/political"
+  },
+  {
+    "name": "Prehistoric",
+    "bgg_id": 1036,
+    "bgg_link": "/boardgamecategory/1036/prehistoric"
+  },
+  {
+    "name": "Puzzle",
+    "bgg_id": 1028,
+    "bgg_link": "/boardgamecategory/1028/puzzle"
+  },
+  {
+    "name": "Racing",
+    "bgg_id": 1031,
+    "bgg_link": "/boardgamecategory/1031/racing"
+  },
+  {
+    "name": "Real-time",
+    "bgg_id": 1037,
+    "bgg_link": "/boardgamecategory/1037/real-time"
+  },
+  {
+    "name": "Religious",
+    "bgg_id": 1115,
+    "bgg_link": "/boardgamecategory/1115/religious"
+  },
+  {
+    "name": "Science Fiction",
+    "bgg_id": 1016,
+    "bgg_link": "/boardgamecategory/1016/science-fiction"
+  },
+  {
+    "name": "Spies/Secret Agents",
+    "bgg_id": 1081,
+    "bgg_link": "/boardgamecategory/1081/spiessecret-agents"
+  },
+  {
+    "name": "Sports",
+    "bgg_id": 1038,
+    "bgg_link": "/boardgamecategory/1038/sports"
+  },
+  {
+    "name": "Territory Building",
+    "bgg_id": 1086,
+    "bgg_link": "/boardgamecategory/1086/territory-building"
+  },
+  {
+    "name": "Trains",
+    "bgg_id": 1034,
+    "bgg_link": "/boardgamecategory/1034/trains"
+  },
+  {
+    "name": "Transportation",
+    "bgg_id": 1011,
+    "bgg_link": "/boardgamecategory/1011/transportation"
+  },
+  {
+    "name": "Travel",
+    "bgg_id": 1097,
+    "bgg_link": "/boardgamecategory/1097/travel"
+  },
+  {
+    "name": "Trivia",
+    "bgg_id": 1027,
+    "bgg_link": "/boardgamecategory/1027/trivia"
+  },
+  {
+    "name": "Wargame",
+    "bgg_id": 1019,
+    "bgg_link": "/boardgamecategory/1019/wargame"
+  },
+  {
+    "name": "Word Game",
+    "bgg_id": 1025,
+    "bgg_link": "/boardgamecategory/1025/word-game"
+  },
+  {
+    "name": "Zombies",
+    "bgg_id": 2481,
+    "bgg_link": "/boardgamecategory/2481/zombies"
+  }
+]

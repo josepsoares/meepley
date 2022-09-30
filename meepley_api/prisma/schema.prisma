@@ -1,0 +1,486 @@
+datasource db {
+  url      = env("DB_URL")
+  provider = "postgresql"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum City {
+  AVEIRO
+  PORTO
+  LISBOA
+  BRAGA
+  VISEU
+  ESPINHO
+  COIMBRA
+  FARO
+  PORTIMAO
+  FUNCHAL
+  PONTA_DELGADA
+  LEIRIA
+  GUARDA
+  BRAGANCA
+  VILA_NOVA_DE_GAIA
+  GUIMARAES
+  SINTRA
+  BEJA
+  EVORA
+}
+
+model BoardgameCategory {
+  id         Int      @id @default(autoincrement())
+  name       String
+  bgg_id     Int?
+  bgg_link   String
+  created_at DateTime @default(now())
+
+  boardgames                          BoardgameHasCategory[]
+  users_favorite_boardgame_categories UserHasFavoriteBoardgameCategories[]
+
+  @@map("boardgame_categories")
+}
+
+model BoardgameMechanic {
+  id         Int      @id @default(autoincrement())
+  name       String
+  bgg_id     Int?
+  bgg_link   String
+  created_at DateTime @default(now())
+
+  boardgames BoardgameHasMechanic[]
+
+  @@map("boardgame_mechanics")
+}
+
+model BoardgameSkill {
+  id         Int       @id @default(autoincrement())
+  name       String
+  emoji      String
+  updated_at DateTime? @updatedAt
+  created_at DateTime  @default(now())
+
+  user User[]
+
+  @@map("boardgame_skills")
+}
+
+model BoardgameHasMechanic {
+  boardgame              Boardgame         @relation(fields: [boardgames_id], references: [id])
+  boardgames_id          Int
+  mechanic               BoardgameMechanic @relation(fields: [boardgame_mechanics_id], references: [id])
+  boardgame_mechanics_id Int
+  updated_at             DateTime?         @updatedAt
+  created_at             DateTime          @default(now())
+
+  @@id([boardgames_id, boardgame_mechanics_id])
+  @@map("boardgames_has_boardgames_mechanics")
+}
+
+model BoardgameHasCategory {
+  boardgame               Boardgame         @relation(fields: [boardgames_id], references: [id])
+  boardgames_id           Int
+  category                BoardgameCategory @relation(fields: [boardgame_categories_id], references: [id])
+  boardgame_categories_id Int
+  updated_at              DateTime?         @updatedAt
+  created_at              DateTime          @default(now())
+
+  @@id([boardgames_id, boardgame_categories_id])
+  @@map("boardgames_has_boardgames_categories")
+}
+
+model Boardgame {
+  id                Int      @id @default(autoincrement())
+  name              String
+  short_description String?
+  description       String?
+  year_released     Int?
+  rank              Int
+  thumbnail         String
+  image             String
+  min_players       Int?
+  max_players       Int?
+  min_age           Int?
+  bgg_link          String
+  bgg_id            Int?
+  bgg_rating        Float
+  official_url      String?
+  avg_playtime      String?
+  designers         String[]
+  artists           String[]
+  difficulty        String?
+  owned             Int?
+  fans              Int?
+  nr_of_ratings     Int?
+
+  categories               BoardgameHasCategory[]
+  mechanics                BoardgameHasMechanic[]
+  matchroom                MatchroomHasBoardgames[]
+  user_favorite_boardgames UserHasFavoriteBoardgames[]
+  places                   PlaceHasBoardgames[]
+
+  @@map("boardgames")
+}
+
+model AchievementDifficulty {
+  id           Int           @id @default(autoincrement())
+  name         String
+  color        String
+  updated_at   DateTime?     @updatedAt
+  created_at   DateTime      @default(now())
+  achievements Achievement[]
+
+  @@map("achievement_difficulties")
+}
+
+model AchievementType {
+  id           Int           @id @default(autoincrement())
+  name         String
+  icon         String
+  updated_at   DateTime?     @updatedAt
+  created_at   DateTime      @default(now())
+  achievements Achievement[]
+
+  @@map("achievement_types")
+}
+
+model Achievement {
+  id          Int       @id @default(autoincrement())
+  name        String
+  requirement String
+  updated_at  DateTime? @updatedAt
+  created_at  DateTime  @default(now())
+  secret      Boolean   @default(false)
+  title       String?
+
+  difficulty                  AchievementDifficulty @relation(fields: [achievement_difficulties_id], references: [id])
+  achievement_difficulties_id Int
+  type                        AchievementType       @relation(fields: [achievement_types_id], references: [id])
+  achievement_types_id        Int
+  users                       UserHasAchievements[]
+
+  @@map("achievements")
+}
+
+model CardRarity {
+  id             Int       @id @default(autoincrement())
+  name           String
+  chance         Float
+  stock          Int
+  gradient       String[]
+  discount_value Int?
+  updated_at     DateTime? @updatedAt
+  created_at     DateTime  @default(now())
+
+  cards Card[]
+
+  @@map("card_rarities")
+}
+
+model CardAttribute {
+  id         Int       @id @default(autoincrement())
+  name       String
+  color      String
+  updated_at DateTime? @updatedAt
+  created_at DateTime  @default(now())
+
+  cards CardHasAttributes[]
+
+  @@map("card_attributes")
+}
+
+model CardHasAttributes {
+  card               Card          @relation(fields: [cards_id], references: [id])
+  cards_id           Int
+  attribute          CardAttribute @relation(fields: [card_attributes_id], references: [id])
+  card_attributes_id Int
+  updated_at         DateTime?     @updatedAt
+  created_at         DateTime      @default(now())
+
+  @@id([cards_id, card_attributes_id])
+  @@map("cards_has_card_attributes")
+}
+
+model Card {
+  id           Int       @id @default(autoincrement())
+  name         String
+  image        String
+  description  String
+  external_url String?
+  updated_at   DateTime? @updatedAt
+  created_at   DateTime  @default(now())
+
+  rarity           CardRarity          @relation(fields: [card_rarities_id], references: [id])
+  card_rarities_id Int
+  attributes       CardHasAttributes[]
+  users            UserHasCards[]
+
+  @@map("cards")
+}
+
+model PlaceType {
+  id         Int       @id @default(autoincrement())
+  name       String
+  emoji      String?
+  updated_at DateTime? @updatedAt
+  created_at DateTime  @default(now())
+
+  places                    PlaceHasTypes[]
+  user_favorite_place_types UserHasFavoritePlacesTypes[]
+
+  @@map("place_types")
+}
+
+model PlaceHasTypes {
+  place          Place     @relation(fields: [places_id], references: [id])
+  places_id      Int
+  type           PlaceType @relation(fields: [place_types_id], references: [id])
+  place_types_id Int
+  updated_at     DateTime? @updatedAt
+  created_at     DateTime  @default(now())
+
+  @@id([places_id, place_types_id])
+  @@map("places_has_place_types")
+}
+
+model PlaceHasBoardgames {
+  place         Place     @relation(fields: [places_id], references: [id])
+  places_id     Int
+  boardgames    Boardgame @relation(fields: [boardgames_id], references: [id])
+  boardgames_id Int
+  updated_at    DateTime? @updatedAt
+  created_at    DateTime  @default(now())
+
+  @@id([places_id, boardgames_id])
+  @@map("places_has_boardgames")
+}
+
+model Place {
+  id                  Int      @id @default(autoincrement())
+  name                String
+  address             String
+  latitude            Decimal
+  longitude           Decimal
+  hours_open          String
+  minimum_consumption Float?
+  image               String
+  average_rating      Float?   @default(0)
+  sells_boardgames    Boolean? @default(false)
+  city                City     @default(AVEIRO)
+  open_days           String[]
+  updated_at          DateTime @updatedAt
+  created_at          DateTime @default(now())
+
+  types      PlaceHasTypes[]
+  user       User?
+  matchrooms Matchroom[]
+  boardgames PlaceHasBoardgames[]
+  feedback   MatchroomFeedback[]
+  @@map("places")
+}
+
+model MatchroomFeedback {
+  id              Int @id @default(autoincrement())
+  feedback_rating Int
+
+  // 1-to-n
+  place        Place     @relation(fields: [place_id], references: [id])
+  place_id     Int
+  matchroom    Matchroom @relation(fields: [matchroom_id], references: [id])
+  matchroom_id Int
+  user         User      @relation(fields: [user_id], references: [id])
+  user_id      Int
+
+  // timestamps
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("place_users_feedbacks")
+}
+
+model MatchroomHasUsers {
+  matchroom     Matchroom @relation(fields: [matchrooms_id], references: [id])
+  matchrooms_id Int
+  user          User      @relation(fields: [users_id], references: [id])
+  users_id      Int
+  user_feedback Boolean?
+  updated_at    DateTime? @updatedAt
+  created_at    DateTime  @default(now())
+
+  @@id([matchrooms_id, users_id])
+  @@map("matchroom_has_users")
+}
+
+model MatchroomHasBoardgames {
+  matchroom     Matchroom @relation(fields: [matchrooms_id], references: [id])
+  matchrooms_id Int
+  boardgame     Boardgame @relation(fields: [boardgames_id], references: [id])
+  boardgames_id Int
+  updated_at    DateTime? @updatedAt
+  created_at    DateTime  @default(now())
+
+  @@id([matchrooms_id, boardgames_id])
+  @@map("matchroom_has_boardgames")
+}
+
+model Matchroom {
+  id                 Int       @id @default(autoincrement())
+  name               String
+  description        String?
+  image              String
+  private            Boolean   @default(false)
+  invite_code        String    @unique
+  is_ongoing         Boolean   @default(false)
+  finished           Boolean   @default(false)
+  min_players        Int
+  max_players        Int
+  estimated_duration String
+  scheduled_date     String
+  scheduled_hour     String
+  scheduled_end_date String
+  updated_at         DateTime? @updatedAt
+  created_at         DateTime  @default(now())
+
+  users      MatchroomHasUsers[]
+  boardgames MatchroomHasBoardgames[]
+  feedback   MatchroomFeedback[]
+
+  place     Place @relation(fields: [places_id], references: [id])
+  places_id Int
+  admin     User  @relation(fields: [admin_id], references: [id])
+  admin_id  Int
+
+  @@map("matchrooms")
+}
+
+model UserHasAchievements {
+  user            User        @relation(fields: [users_id], references: [id])
+  users_id        Int
+  achievement     Achievement @relation(fields: [achievements_id], references: [id])
+  achievements_id Int
+  updated_at      DateTime?   @updatedAt
+  created_at      DateTime    @default(now())
+
+  @@id([users_id, achievements_id])
+  @@map("users_has_achievements")
+}
+
+model UserHasCards {
+  user       User      @relation(fields: [users_id], references: [id])
+  users_id   Int
+  card       Card      @relation(fields: [cards_id], references: [id])
+  cards_id   Int
+  updated_at DateTime? @updatedAt
+  created_at DateTime  @default(now())
+
+  @@id([users_id, cards_id])
+  @@map("users_has_cards")
+}
+
+model UserHasFavoriteBoardgames {
+  user          User      @relation(fields: [users_id], references: [id])
+  users_id      Int
+  boardgame     Boardgame @relation(fields: [boardgames_id], references: [id])
+  boardgames_id Int
+  updated_at    DateTime? @updatedAt
+  created_at    DateTime  @default(now())
+
+  @@id([users_id, boardgames_id])
+  @@map("users_has_favorite_boardgames")
+}
+
+model UserHasFavoriteBoardgameCategories {
+  user                    User              @relation(fields: [users_id], references: [id])
+  users_id                Int
+  boardgame_category      BoardgameCategory @relation(fields: [boardgame_categories_id], references: [id])
+  boardgame_categories_id Int
+  updated_at              DateTime?         @updatedAt
+  created_at              DateTime          @default(now())
+
+  @@id([users_id, boardgame_categories_id])
+  @@map("users_has_favorite_boardgame_categories")
+}
+
+model UserHasFavoritePlacesTypes {
+  user           User      @relation(fields: [users_id], references: [id])
+  users_id       Int
+  place_type     PlaceType @relation(fields: [place_types_id], references: [id])
+  place_types_id Int
+  updated_at     DateTime? @updatedAt
+  created_at     DateTime  @default(now())
+
+  @@id([users_id, place_types_id])
+  @@map("users_has_favorite_places")
+}
+
+model User {
+  id              Int       @id @default(autoincrement())
+  email           String?   @unique
+  name            String
+  username        String    @unique
+  provider_name   String?
+  provider_token  String?
+  password        String?
+  title           String?   @default("")
+  avatar          String
+  calibrated      Boolean?
+  matches_played  Int       @default(0)
+  favorite_days   String[]
+  role            Role      @default(USER)
+  premium         Boolean   @default(false)
+  premium_expires DateTime?
+
+  boardgame_skill               BoardgameSkill?                      @relation(fields: [boardgame_skills_id], references: [id])
+  boardgame_skills_id           Int?
+  place                         Place?                               @relation(fields: [places_id], references: [id])
+  places_id                     Int?                                 @unique
+  matchroom_admins              Matchroom[]
+  matchrooms                    MatchroomHasUsers[]
+  achievements                  UserHasAchievements[]
+  cards                         UserHasCards[]
+  favorite_boardgames           UserHasFavoriteBoardgames[]
+  favorite_boardgame_categories UserHasFavoriteBoardgameCategories[]
+  favorite_place_types          UserHasFavoritePlacesTypes[]
+  feedback                      MatchroomFeedback[]
+  bug_report                    UserBugReport[]
+
+  follower  UserFollow[] @relation("follower")
+  following UserFollow[] @relation("following")
+
+  updated_at DateTime? @updatedAt
+  created_at DateTime  @default(now())
+
+  @@map("users")
+}
+
+model UserFollow {
+  follower     User     @relation("follower", fields: [follower_id], references: [id])
+  follower_id  Int
+  following    User     @relation("following", fields: [following_id], references: [id])
+  following_id Int
+  created_at   DateTime @default(now())
+
+  @@id([follower_id, following_id])
+  @@map("user_follows")
+}
+
+model UserBugReport {
+  id          Int    @id @default(autoincrement())
+  description String
+  user_id     Int
+  user        User   @relation(fields: [user_id], references: [id])
+
+  updated_at DateTime? @updatedAt
+  created_at DateTime  @default(now())
+}
+
+enum Role {
+  USER
+  ADMIN
+  PLACE
+}

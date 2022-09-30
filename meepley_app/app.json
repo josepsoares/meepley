@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "MeePley",
+    "slug": "meepley-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/branding/meepley/logo-compact.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./src/assets/images/branding/meepley/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/branding/meepley/logo-compact.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.josepsoares.meepleyapp"
+    },
+    "web": {
+      "favicon": "./src/assets/images/branding/meepley/favicon.png"
+    },
+    "packagerOpts": {
+      "sourceExts": [
+        "cjs",
+        "svg"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
+  }
+}
